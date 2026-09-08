@@ -1,0 +1,16 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Java compilado
+*.class
+
+# Pastas de compilação
+out/
+build/
+
+# NetBeans
+nbproject/private/
+
+# Logs
+*.log
