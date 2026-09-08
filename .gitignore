@@ -9,8 +9,8 @@
 out/
 build/
 
-# NetBeans
-nbproject/private/
+# Projetos NetBeans
+**/nbproject/
 
 # Logs
 *.log
