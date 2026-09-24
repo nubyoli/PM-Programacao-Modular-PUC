@@ -9,6 +9,15 @@ public class Fatura {
         this.valorTotal = valorTotal;
     }
 
+    public void exibirFatura(){
+        System.out.println("--- Sua fatura atualizada ---");
+    }
+
+    public void exibirValorFinal(){
+        System.out.println("-----------------------------------");
+        System.out.println("Valor final da sua fatura: " + valorTotal);
+    }
+
     public Item[] getItens() {
         return itens;
     }

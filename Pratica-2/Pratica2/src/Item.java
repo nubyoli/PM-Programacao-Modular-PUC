@@ -1,6 +1,6 @@
 public class Item {
     private Produto produto;
-    private int qtd;
+    private int qtd, qtdEstoque;
     private double valorTotal, valorItem;
 
     public Item(){}
@@ -10,6 +10,10 @@ public class Item {
         this.qtd = qtd;
         this.valorTotal = valorTotal;
         this.valorItem = valorItem;
+    }
+
+    public void alterarQuantidade(Item item, int qtd){
+        item.qtd = qtd;
     }
 
     public Produto getProduto() {
@@ -42,5 +46,13 @@ public class Item {
 
     public void setValorItem(double valorItem) {
         this.valorItem = valorItem;
+    }
+
+    public int getQtdEstoque() {
+        return qtdEstoque;
+    }
+
+    public void setQtdEstoque(int qtdEstoque) {
+        this.qtdEstoque = qtdEstoque;
     }
 }
