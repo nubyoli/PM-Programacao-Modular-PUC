@@ -1,19 +1,24 @@
 public class Item {
     private Produto produto;
-    private int qtd, qtdEstoque;
-    private double valorTotal, valorItem;
+    private int qtd;
 
-    public Item(){}
+    public Item() {}
 
-    public Item(Produto produto, int qtd, double valorTotal, double valorItem) {
+    public Item(Produto produto, int qtd) {
         this.produto = produto;
         this.qtd = qtd;
-        this.valorTotal = valorTotal;
-        this.valorItem = valorItem;
     }
 
-    public void alterarQuantidade(Item item, int qtd){
-        item.qtd = qtd;
+    public double getValorTotal() {
+        return produto.getPreco() * qtd;
+    }
+
+    public void alterarQuantidade(int novaQtd) {
+        this.qtd = novaQtd;
+    }
+
+    public void adicionarQuantidade(int qtdExtra) {
+        this.qtd += qtdExtra;
     }
 
     public Produto getProduto() {
@@ -32,27 +37,4 @@ public class Item {
         this.qtd = qtd;
     }
 
-    public double getValorTotal() {
-        return valorTotal;
-    }
-
-    public void setValorTotal(double valorTotal) {
-        this.valorTotal = valorTotal;
-    }
-
-    public double getValorItem() {
-        return valorItem;
-    }
-
-    public void setValorItem(double valorItem) {
-        this.valorItem = valorItem;
-    }
-
-    public int getQtdEstoque() {
-        return qtdEstoque;
-    }
-
-    public void setQtdEstoque(int qtdEstoque) {
-        this.qtdEstoque = qtdEstoque;
-    }
 }
